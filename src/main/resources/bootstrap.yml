@@ -1,0 +1,19 @@
+server:
+  port: 8091
+
+spring:
+  application:
+    name: configServer
+  profiles:
+    active: local
+  cloud:
+    config:
+      uri: http://localhost:8090
+#  config:
+#    import: optional:configserver:http://localhost:8090
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
